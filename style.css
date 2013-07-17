@@ -99,21 +99,22 @@ body,p {
     left:50%;
 }
 .rightTab {
-    margin-left: 240px;
-    left:50%;
-    width: 104px;
-}
-.tab {
     vertical-align: middle;
     height: 30px;
     background-color: #61633b;
     position:absolute;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-}
-.tab:hover {
-    background-color: #9c9f5f;
+    margin-left: 240px;
+    left:50%;
+    width: 104px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
 }
 .poptab {
+    cursor:default;
     margin-left: -315px;
     width: 95px;
     height: 30px;
@@ -121,8 +122,31 @@ body,p {
     position:absolute;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.8);
 }
+
+.tab {
+    cursor:pointer;
+    vertical-align: middle;
+    height: 30px;
+    background-color: #61633b;
+    position:absolute;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+
+}
+
+.tab:hover {
+    background-color: #9c9f5f;
+    width:80px;
+    margin-left:-300px;
+}
+.rightTab:hover {
+    background-color: #9c9f5f;
+}
 .tabText {
-    cursor:default;
+
     position:absolute;
     top:50%;
     margin-top: -12px;
