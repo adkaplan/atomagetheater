@@ -6,6 +6,10 @@
     font-family: swiss;
     src: url("font/Swiss.ttf");
 }
+@font-face {
+    font-family: caviar;
+    src: url("font/CaviarDreams.ttf");
+}
 body {
     background-color: #EEE;
     background-image: url("img/coffee2.jpg") center center no-repeat;
@@ -83,20 +87,31 @@ body,p {
     background-image: url("img/borderR.gif");
     height: 600px;
 }
+#ourseason {
+    font-size: 19px;
+    font-family: caviar;
+    color: #eedcab;
+    text-shadow: 0 1px 1px rgba(255,255,255,.3);
+}
 .leftTab {
     margin-left: -295px;
+    width: 75px;
     left:50%;
 }
 .rightTab {
-    margin-left: -295px;
+    margin-left: 240px;
+    left:50%;
+    width: 104px;
 }
 .tab {
     vertical-align: middle;
-    width: 75px;
     height: 30px;
     background-color: #61633b;
     position:absolute;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.tab:hover {
+    background-color: #9c9f5f;
 }
 .poptab {
     margin-left: -315px;
@@ -106,11 +121,11 @@ body,p {
     position:absolute;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.8);
 }
-
 .tabText {
+    cursor:default;
     position:absolute;
     top:50%;
-    margin-top: -10px;
+    margin-top: -12px;
     margin-left: 4px;
     font:18px Arial;
     color:#eedcab;
@@ -137,7 +152,7 @@ body,p {
     color:#fff;
     font:16px Arial;
 }
-#content {
+#contenttop {
     position: absolute;
     width:420px;
     height:630px;
@@ -147,6 +162,19 @@ body,p {
     background-color: #538e8a;
     padding: 0 10px 0 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+#contentleft {
+    width: 300px;
+    position: absolute;
+
+}
+#contentright {
+    width: 130;
+    position: absolute;
+    right: 0px;
+}
+.contentrightimage {
+    width: 130;
 }
 .top {
     vertical-align:top;
