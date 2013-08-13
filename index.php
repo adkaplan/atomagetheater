@@ -1,5 +1,12 @@
 <?php include_once("php/header.php") ?>
 <script type="text/javascript">
+    window.onresize = function(event) {
+        $("#gutterL").css("height",$("#contenttop").height()-110 + "px");
+        $("#gutterR").css("height",$("#contenttop").height()-110 + "px");
+        // $("#contenttop").css("height",$(window).height()-56 + "px");
+        console.log();
+
+    };
     $(document).ready(function() {
     // Tooltip only Text
     $('.masterTooltip').hover(function(){
@@ -21,6 +28,10 @@
             .css({ top: mousey, left: mousex })
     });
     });
+    window.onload = function() {
+         $("#gutterL").css("height",$("#contenttop").height()-110 + "px");
+        $("#gutterR").css("height",$("#contenttop").height()-110 + "px");
+    }
 </script>
 <div id="masterdiv">
     <a href="home">
@@ -33,7 +44,7 @@
     <a href="tix">
         <div id = "tix" class="leftTab tab noisy" style="top:235px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
-                Tix
+                Tickets
             </div>
         </div>
     </a>
@@ -73,15 +84,22 @@
         <img src="img/header.png"/><br>
     	</center>
 
-        <div id="contentleft" class="content" id="<?php echo $id ?>"><?php print file_get_contents($url.'php/load.php?id='.$id) ?></div>
-        <div id="contentright">
-            <center><img src="img/ourseason.png"/><br>
-            <?php
-             $input = explode(",",file_get_contents('txt/homeimg.txt'));
-             for ($i = 0;$i<count($input);$i++) {
-                echo "<img src='" . $input[$i] . "' class='.contentrightimage'/><br>";
-             }
-             ?>
+        <div class="content contentleft" id="<?php echo $id ?>">
+            <div id="contentright">
+                <center><img src="img/ourseason.png"/><br>
+                <?php
+                 $input = explode(";",file_get_contents('txt/homeimg.txt'));
+                 for ($i = 0;$i<count($input)-1;$i++) {
+                    $input[$i] = explode(",",$input[$i]);
+                 }
+                 for ($i = 0;$i<count($input)-1;$i++) {
+                    echo "<a href='" . $input[$i][1] . "'><img src='" . $input[$i][0] . "' class='.contentrightimage'/><br></a>";
+                 }
+                 ?>
+            </div>
+            <?php print file_get_contents($url.'php/load.php?id='.$id) ?>
+            <center><img src="img/footer.png"/></center>
+            <?php print file_get_contents($url.'php/footer.php')?>
         </div>
     </div>
     <div id="gutterL">
@@ -94,11 +112,10 @@
         <div id="socialcenter" class="noisy">
             <center>
             <a href="#" title="tumblr" class="masterTooltip"><img src="img/tmblr.png" alt="TMBLR"/></a>
-            <a href="#" title="twitter" class="masterTooltip"><img src="img/twit.png"/></a>
+            <a href="# " title="twitter" class="masterTooltip"><img src="img/twit.png"/></a>
             <a href="#" title="facebook" class="masterTooltip"><img src="img/facebook.png"/></a>
             <a href="#" title="email" class="masterTooltip"><img src="img/mail.png"/></a>
             <center>
         </div>
     </div>
 </div>
-<?php include_once("php/footer.php") ?>

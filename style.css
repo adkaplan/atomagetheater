@@ -12,12 +12,12 @@
 }
 body {
     background-color: #EEE;
-    background-image: url("img/coffee2.jpg") center center no-repeat;
+    background-image: url("img/coffee2.jpg") center center;
 }
 html {
     width:100%;
     height:100%;
-    background:url("img/coffee2.jpg") center center no-repeat;
+    background:url("img/coffee2.jpg") center center;
 }
 
 h3,h2,h1 {
@@ -76,7 +76,7 @@ body,p {
     margin-left: -220px;
     width: 10px;
     background-image: url("img/borderL.gif");
-    height: 600px;
+    height: 520px;
 }
 #gutterR {
     width: 10px;
@@ -85,13 +85,17 @@ body,p {
     margin-left: 230px;
     left:50%;
     background-image: url("img/borderR.gif");
-    height: 600px;
+    height: 520px;
 }
 #ourseason {
     font-size: 19px;
     font-family: caviar;
     color: #eedcab;
     text-shadow: 0 1px 1px rgba(255,255,255,.3);
+}
+#footer {
+    color: #FFFFFF;
+    font-size: 10px;
 }
 .leftTab {
     margin-left: -295px;
@@ -179,7 +183,8 @@ body,p {
 #contenttop {
     position: absolute;
     width:420px;
-    height:630px;
+    /*height:100%;*/
+    overflow:hidden;
     top: 40px;
     left: 50%;
     margin-left: -210px;
@@ -187,15 +192,25 @@ body,p {
     padding: 0 10px 0 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
-#contentleft {
-    width: 300px;
-    position: absolute;
+.contentleft {
+    width: 100%;
+    /*position: relative;*/
+    float:left;
 
 }
 #contentright {
-    width: 130;
-    position: absolute;
-    right: 0px;
+    width: 130px;
+    /*position: relative;*/
+    margin: 0 0 0 0px;
+    /*right: 0px;*/
+    float: right;
+    /*display: inline-block;*/
+    /*display: -moz-inline-box;*/
+    /*-moz-box-orient: vertical;*/
+    /*vertical-align: top;*/
+    /*zoom: 1;*/
+    /**display: inline;*/
+
 }
 .contentrightimage {
     width: 130;

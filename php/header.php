@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Atomic Age Theater</title>
 <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/header.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="js/header.js" type="text/javascript" charset="utf-8"></script> -->
 <?php
 // Where it says $_REQUEST['edit_mode'], replace edit_mode with a custom key that only you
 // know about.  For example, $_REQUEST['lksjfdsfdlkjf'].  Then, to edit a page, append
