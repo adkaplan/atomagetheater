@@ -29,7 +29,7 @@
     });
     });
     window.onload = function() {
-         $("#gutterL").css("height",$("#contenttop").height()-110 + "px");
+        $("#gutterL").css("height",$("#contenttop").height()-110 + "px");
         $("#gutterR").css("height",$("#contenttop").height()-110 + "px");
     }
 </script>
@@ -41,22 +41,29 @@
             </div>
         </div>
     </a>
+    <a href="blog">
+        <div id = "blog" class="leftTab tab noisy" style="top:235px;" onclick="tabClick(event)">
+            <div class="tabText unselectable">
+                Blog
+            </div>
+        </div>
+    </a>
     <a href="tix">
-        <div id = "tix" class="leftTab tab noisy" style="top:235px;" onclick="tabClick(event)">
+        <div id = "tix" class="leftTab tab noisy" style="top:270px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Tickets
             </div>
         </div>
     </a>
     <a href="crew">
-        <div id = "crew" class="leftTab tab noisy" style="top:270px;" onclick="tabClick(event)">
+        <div id = "crew" class="leftTab tab noisy" style="top:305px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Crew
             </div>
         </div>
     </a>
     <a href="contact">
-        <div id = "contact" class="leftTab tab noisy" style="top:305px;" onclick="tabClick(event)">
+        <div id = "contact" class="leftTab tab noisy" style="top:340px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Contact
             </div>
@@ -84,7 +91,8 @@
         <img src="img/header.png"/><br>
     	</center>
 
-        <div class="content contentleft" id="<?php echo $id ?>">
+        <div class="contentleft">
+
             <div id="contentright">
                 <center><img src="img/ourseason.png"/><br>
                 <?php
@@ -97,7 +105,9 @@
                  }
                  ?>
             </div>
+            <div class="content" id="<?php echo $id ?>">
             <?php print file_get_contents($url.'php/load.php?id='.$id) ?>
+            </div>
             <center><img src="img/footer.png"/></center>
             <?php print file_get_contents($url.'php/footer.php')?>
         </div>
