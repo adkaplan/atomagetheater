@@ -34,35 +34,35 @@
     }
 </script>
 <div id="masterdiv">
-    <a href="home">
+    <a href="index.php?id=home">
         <div id = "home" class="leftTab tab noisy" style="top:200px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Home
             </div>
         </div>
     </a>
-    <a href="blog">
+    <a href="index.php?id=blog">
         <div id = "blog" class="leftTab tab noisy" style="top:235px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Blog
             </div>
         </div>
     </a>
-    <a href="tix">
+    <a href="index.php?id=tix">
         <div id = "tix" class="leftTab tab noisy" style="top:270px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Tickets
             </div>
         </div>
     </a>
-    <a href="crew">
+    <a href="index.php?id=crew">
         <div id = "crew" class="leftTab tab noisy" style="top:305px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Crew
             </div>
         </div>
     </a>
-    <a href="contact">
+    <a href="index.php?id=contact">
         <div id = "contact" class="leftTab tab noisy" style="top:340px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
                 Contact
@@ -92,21 +92,22 @@
     	</center>
 
         <div class="contentleft">
-
-            <div id="contentright">
-                <center><img src="img/ourseason.png"/><br>
-                <?php
+            <?php if(substr($_SERVER["REQUEST_URI"],-3,3) != "tix") {
+                echo("<div id='contentright'><center><img src='img/ourseason.png'/><br>");
                  $input = explode(";",file_get_contents('txt/homeimg.txt'));
                  for ($i = 0;$i<count($input)-1;$i++) {
                     $input[$i] = explode(",",$input[$i]);
                  }
                  for ($i = 0;$i<count($input)-1;$i++) {
-                    echo "<a href='" . $input[$i][1] . "'><img src='" . $input[$i][0] . "' class='.contentrightimage'/><br></a>";
+                    echo ("<a href='" . $input[$i][1] . "'><img src='" . $input[$i][0] . "' class='.contentrightimage'/><br></a>");
                  }
-                 ?>
-            </div>
+
+            echo("</div>");
+            }
+            ?>
             <div class="content" id="<?php echo $id ?>">
-            <?php print file_get_contents($url.'php/load.php?id='.$id) ?>
+
+            <?php echo $id;print file_get_contents($url.'php/load.php?id='.$id) ?>
             </div>
             <center><img src="img/footer.png"/></center>
             <?php print file_get_contents($url.'php/footer.php')?>

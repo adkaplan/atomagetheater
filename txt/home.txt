@@ -1,7 +1,11 @@
-<h3>Check out this headerssss</h3><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>And some regular <i>text</i></div></blockquote><h3>And then a header</h3><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>But then it goes back to regular text</div></blockquote><h1>And then a header!</h1>
+
+
+            homehome
+
+            homehomesss<h3>Check out this headers</h3><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>And some regular <i>text</i></div></blockquote><h3><img src="http://i.imgur.com/UY8CHpW.png"><br></h3><h3>And then a header<br></h3><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>But then it goes back to regular text</div></blockquote><h1>And then a header!</h1>
 
 Hello and welcome!
 
 Can you see?
 Cool.
-I have music going. Sorry. Also mic slowed things down.
+I have music going. Sorry. Also mic slowed things down.                                    
