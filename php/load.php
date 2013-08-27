@@ -1,7 +1,8 @@
 <?php
 $request = $_REQUEST['id'];
-echo $request;
+// echo $request;
 if ($request == "blog") {
+    //Parse to wordpress
     $rss = new DOMDocument();
     $rss->load("http://aatheater.wordpress.com/feed/");
     $feed = array();
@@ -29,8 +30,10 @@ if ($request == "blog") {
 } else if ($request == "tix") {
 
      #Form (Autofilling based on variables)
+    //EDIT THE SHOWDATES TO UPDATE
     $showdates = ["Jan 5, 5:30PM","Jan 6, 7:30PM"];
-    echo "<center><img class='banner' src='http://i.imgur.com/AxQZOnS.png'/></center>";
+    //UPDATE HERE
+    echo "<center><img class='banner' src='./img/seasontemp.png'/></center>";
     include '../txt/'.$_REQUEST['id'].'.txt';
      // $file = '../txt/'.$_REQUEST['id'].'.txt';
     $season = file_get_contents('../txt/season.txt');

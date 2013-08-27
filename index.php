@@ -55,10 +55,10 @@
             </div>
         </div>
     </a>
-    <a href="index.php?id=crew">
-        <div id = "crew" class="leftTab tab noisy" style="top:305px;" onclick="tabClick(event)">
+    <a href="index.php?id=company">
+        <div id = "company" class="leftTab tab noisy" style="top:305px;" onclick="tabClick(event)">
             <div class="tabText unselectable">
-                Crew
+                Company
             </div>
         </div>
     </a>
@@ -85,6 +85,13 @@
             </div>
         </div>
     </a>
+    <a href="http://www.boston.com/yourcampus/news/emerson/2012/12/ambition_passion_drives_emersons_non-profit_student_theater_group.html" onclick="javascript:void window.open('http://www.boston.com/yourcampus/news/emerson/2012/12/ambition_passion_drives_emersons_non-profit_student_theater_group.html','1374036248335','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">
+        <div class="rightTab noisy" style="top:240px;" >
+            <div class="tabText unselectable">
+                Support Us
+            </div>
+        </div>
+    </a>
 
     <div id="contenttop" class="noisy">
         <center>
@@ -92,22 +99,22 @@
     	</center>
 
         <div class="contentleft">
-            <?php if(substr($_SERVER["REQUEST_URI"],-3,3) != "tix") {
-                echo("<div id='contentright'><center><img src='img/ourseason.png'/><br>");
-                 $input = explode(";",file_get_contents('txt/homeimg.txt'));
-                 for ($i = 0;$i<count($input)-1;$i++) {
-                    $input[$i] = explode(",",$input[$i]);
-                 }
-                 for ($i = 0;$i<count($input)-1;$i++) {
-                    echo ("<a href='" . $input[$i][1] . "'><img src='" . $input[$i][0] . "' class='.contentrightimage'/><br></a>");
-                 }
+             <?php //if(substr($_SERVER["REQUEST_URI"],-3,3) != "tix") {
+            //     echo("<div id='contentright'><center><img src='img/ourseason.png'/><br>");
+            //      $input = explode(";",file_get_contents('txt/homeimg.txt'));
+            //      for ($i = 0;$i<count($input)-1;$i++) {
+            //         $input[$i] = explode(",",$input[$i]);
+            //      }
+            //      for ($i = 0;$i<count($input)-1;$i++) {
+            //         echo ("<a href='" . $input[$i][1] . "'><img src='" . $input[$i][0] . "' class='.contentrightimage'/><br></a>");
+            //      }
 
-            echo("</div>");
-            }
+            // echo("</div>");
+            //}
             ?>
             <div class="content" id="<?php echo $id ?>">
 
-            <?php echo $id;print file_get_contents($url.'php/load.php?id='.$id) ?>
+            <?php print file_get_contents($url.'php/load.php?id='.$id) ?>
             </div>
             <center><img src="img/footer.png"/></center>
             <?php print file_get_contents($url.'php/footer.php')?>
@@ -122,10 +129,10 @@
     <div id="social" class="noisy">
         <div id="socialcenter" class="noisy">
             <center>
-            <a href="#" title="tumblr" class="masterTooltip"><img src="img/tmblr.png" alt="TMBLR"/></a>
-            <a href="# " title="twitter" class="masterTooltip"><img src="img/twit.png"/></a>
-            <a href="#" title="facebook" class="masterTooltip"><img src="img/facebook.png"/></a>
-            <a href="#" title="email" class="masterTooltip"><img src="img/mail.png"/></a>
+            <a href="#" title="tumblr" class="masterTooltip"><img src="img/tmblr.png" alt="TUMBLR"/></a>
+            <a href="# " title="twitter" class="masterTooltip"><img src="img/twit.png"/ alt="TWITTER"></a>
+            <a href="#" title="facebook" class="masterTooltip"><img src="img/facebook.png" alt="FACEBOOK"/></a>
+            <a href="#" title="email" class="masterTooltip"><img src="img/mail.png" alt="EMAIL"/></a>
             <center>
         </div>
     </div>

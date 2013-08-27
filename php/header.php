@@ -22,7 +22,16 @@
 $folder = str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['PHP_SELF']);
 $url    = sprintf('http://%s%s', $_SERVER['SERVER_NAME'], $folder);
 if (!isset($_GET['id'])) { $id = 'home'; } else { $id = basename($_GET['id']); }
-isset($_REQUEST['aatedit']) ? require_once('edit_header.php') : require_once('view_header.php') ;
+if (isset($_REQUEST['aatedit'])) {
+    $id = basename($_GET['id']);
+    if ($id == "tix") {
+        echo "BARF BARF BARF BARF";
+    } else {
+        require_once('edit_header.php');
+    }
+} else {
+    require_once('view_header.php') ;
+}
 ?>
 </head>
 <body>

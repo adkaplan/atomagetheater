@@ -4,7 +4,7 @@ $file = $_REQUEST['id'];
 $data = $_REQUEST['value'];
 
 $fp = fopen('../txt/'.$file.".txt","w+");
- echo ('../txt/'.$file.".txt");
+ // echo ('../txt/'.$file.".txt");
 
 if(!$fp) {
     echo 'Error: Cannot open file.';
